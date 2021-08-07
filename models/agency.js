@@ -5,4 +5,4 @@ const agencySchema = mongoose.Schema({
     agencyName: String
 });
 
-module.exports = mongoose.model('agency', agencySchema);
+module.exports = mongoose.model('Agency', agencySchema);

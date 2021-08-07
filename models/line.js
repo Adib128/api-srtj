@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 
-const quoteSchema = mongoose.Schema({
-    content: {
-        type: String,
-        required: true
-    },
-    author: String
+const lineSchema = mongoose.Schema({
+    lineNumber: Number,
+    lineName: String,
+    lineType: String,
+    agency: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Agency"
+    } 
 });
 
-module.exports = mongoose.model('quote', quoteSchema);
+module.exports = mongoose.model('Line', lineSchema);
