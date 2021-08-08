@@ -2,7 +2,7 @@ const Line = require("../models/line.js");
 
 exports.listLines = async (req, res, next) => {
     try{
-      const lines = await Line.find().populate('agency');
+      const lines = await Line.find().populate('agency').populate('itineraries');
       res.status(200).send(lines);
     } catch (error) {
         res.status(500).send(error);
@@ -11,7 +11,7 @@ exports.listLines = async (req, res, next) => {
   
   exports.getLine = async (req, res, next) => {
       try{
-        const line = await Line.findOne({ _id: req.params.id }).populate('agency');
+        const line = await Line.findOne({ _id: req.params.id }).populate('agency').populate('itineraries');
         res.status(200).send(line);
       } catch (error) {
         res.status(500).send(error);

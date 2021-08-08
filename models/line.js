@@ -7,7 +7,11 @@ const lineSchema = mongoose.Schema({
     agency: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Agency"
-    } 
+    },
+    itineraries: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Itinerary"
+    }] 
 });
 
 module.exports = mongoose.model('Line', lineSchema);
