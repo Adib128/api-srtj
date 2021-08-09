@@ -11,7 +11,7 @@ exports.listLines = async (req, res, next) => {
   
   exports.getLine = async (req, res, next) => {
       try{
-        const line = await Line.findOne({ _id: req.params.id }).populate('agency').populate('itineraries');
+        const line = await Line.findOne({ _id: req.params.id }).populate('agency').populate('itineraries').populate('stops');
         res.status(200).send(line);
       } catch (error) {
         res.status(500).send(error);
