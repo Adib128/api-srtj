@@ -6,6 +6,10 @@ router.get('/', lineController.listLines);
 
 router.get('/:id', lineController.getLine);
 
+router.get('/:id/stops', lineController.getLineStops);
+
+router.get('/:id/itineraries', lineController.getLineItineraries);
+
 router.post('/', lineController.createLine);
 
 module.exports = router ; 
