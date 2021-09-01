@@ -7,6 +7,8 @@ router.get('/', agencyController.listAgencies);
 
 router.get('/:id', agencyController.getAgency);
 
+router.get('/:id/lines', agencyController.getAgencyLines);
+
 router.post('/', agencyController.createAgency);
 
 router.patch('/:id', agencyController.updateAgency);

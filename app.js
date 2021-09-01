@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use('/agency' , agencyRoute) ; 
-app.use('/line' , lineRoute) ; 
+app.use('/lines' , lineRoute) ; 
 app.use('/stop' , stopRoute) ; 
 app.use('/itinerary' , itineraryRoute) ; 
 
