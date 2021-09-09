@@ -8,7 +8,7 @@ router.get('/:id', lineController.getLine);
 
 router.get('/:id/stops', lineController.getLineStops);
 
-router.get('/:id/itineraries', lineController.getLineItineraries);
+router.get('/:id/trips', lineController.getLineTrips);
 
 router.post('/', lineController.createLine);
 

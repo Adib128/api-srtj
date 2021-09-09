@@ -11,10 +11,10 @@ const lineSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Agency",
     },
-    itineraries: [
+    trips: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Itinerary",
+        ref: "Trip",
       },
     ],
     stops: [
