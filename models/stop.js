@@ -7,24 +7,18 @@ const stopSchema = mongoose.Schema(
     stopType: String,
     stopPhoto: String,
     equipments: [
-      { 
+      {
         type: String,
-        enum: ["Trash", "Light", "Bench", "Access PRM"], 
-      }
+        enum: ["Trash", "Light", "Bench", "Access PRM"],
+      },
     ],
-    position: {
-      type: {
-        type: String,
-        enum: ["Point"],
-      },
-      cordinates: {
-        type: [Number],
-      },
+    location: {
+      type: [Number],
     },
     line: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Line",
-    }
+    },
   },
   { versionKey: false }
 );

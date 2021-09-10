@@ -17,3 +17,22 @@ exports.getStop = async (req, res, next) => {
     res.status(500).send(error);
   }
 };
+
+exports.getNearStops = async (req, res, next) => {
+  try {
+    const stops = await Stop.find({
+      location: {
+        $nearSphere: {
+          $geometry: {
+            type: "Point",
+            coordinates: [req.query.longitude, req.query.latitude],
+          },
+          $maxDistance: 10000,
+        },
+      },
+    });
+    res.status(200).send(stops);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};

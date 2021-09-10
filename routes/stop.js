@@ -6,4 +6,6 @@ router.get('/', stopController.listStops);
 
 router.get('/:id', stopController.getStop);
 
+router.get('/nearby', stopController.getNearStops);
+
 module.exports = router ; 

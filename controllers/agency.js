@@ -23,7 +23,7 @@ exports.getAgencyLines = async (req, res, next) => {
   try {
     const lines = await Line.find(
       { agency: req.params.id },
-      { itineraries: 0, stops: 0 }
+      { trips: 0, stops: 0 }
     );
     res.status(200).send(lines);
   } catch (error) {
