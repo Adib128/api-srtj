@@ -24,13 +24,3 @@ exports.getTrip = async (req, res, next) => {
     res.status(500).send(error);
   }
 };
-
-exports.createTrip = async (req, res, next) => {
-  try {
-    const trip = new Trip(req.body);
-    await trip.save();
-    res.status(201).send(trip);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-};

@@ -35,13 +35,3 @@ exports.getLineTrips = async (req, res, next) => {
     res.status(500).send(error);
   }
 };
-
-exports.createLine = async (req, res, next) => {
-  try {
-    const line = new Line(req.body);
-    await line.save();
-    res.status(201).send(line);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-};

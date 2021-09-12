@@ -10,15 +10,39 @@ const Line = require("./models/line.js");
 const Trip = require("./models/trip.js");
 const Stop = require("./models/stop.js");
 const mongoose = require('mongoose');
-const AdminBro = require('admin-bro')
-const AdminBroExpress = require('@admin-bro/express')
-const AdminBroMongoose = require('@admin-bro/mongoose')
+const AdminBro = require('admin-bro');
+const AdminBroExpress = require('@admin-bro/express');
+const AdminBroMongoose = require('@admin-bro/mongoose');
+const swaggerUI = require("swagger-ui-express");
+const swaggerJsDoc = require("swagger-jsdoc");
+var cors = require('cors')
  
 const app = express();
+app.use(cors())
 
 app.use(bodyParser.json());
 
-app.use('/agency' , agencyRoute) ; 
+const options = {
+	definition: {
+		openapi: "3.0.0",
+		info: {
+			title: "API Open Data SRTJ",
+			version: "1.0.0",
+			description: "SRTJ Open Data API",
+		},
+		servers: [
+			{
+				url: "http://localhost:3000",
+			},
+		],
+	},
+	apis: ["./routes/*.js"],
+};
+
+const specs = swaggerJsDoc(options);
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+
+app.use('/agencies' , agencyRoute) ; 
 app.use('/lines' , lineRoute) ; 
 app.use('/stops' , stopRoute) ; 
 app.use('/trips' , tripRoute) ; 
