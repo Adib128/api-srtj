@@ -23,6 +23,18 @@ router.get("/", lineController.listLines);
 
 /**
  * @swagger
+ * /lines:
+ *   get:
+ *     summary: Get list of lines
+ *     tags: [Line]
+ *     responses:
+ *       200:
+ *         description: List of lines
+ */
+ router.get("/search", lineController.searchLines);
+
+/**
+ * @swagger
  * /lines/{id}:
  *   get:
  *     summary: Get line details by ID
@@ -38,7 +50,7 @@ router.get("/", lineController.listLines);
  *       200:
  *         description: Line details
  */
-router.get("/:id", lineController.getLine);
+router.get("/line/:id", lineController.getLine);
 
 /**
  * @swagger

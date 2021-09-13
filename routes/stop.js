@@ -11,7 +11,7 @@ const stopController = require('../controllers/stop.js');
 
 /**
  * @swagger
- * /lines:
+ * /stops:
  *   get:
  *     summary: Get list of stops
  *     tags: [Stop]
