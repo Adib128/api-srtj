@@ -6,7 +6,7 @@ const tripController = require('../controllers/trip.js');
  * @swagger
  * tags:
  *   name: Trip
- *   description: Trip API
+ *   description: Operations about trips
  */
 
 /**

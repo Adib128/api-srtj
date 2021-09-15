@@ -6,7 +6,7 @@ const lineController = require("../controllers/line.js");
  * @swagger
  * tags:
  *   name: Line
- *   description: Line API
+ *   description: Operations about lines
  */
 
 /**
@@ -23,19 +23,7 @@ router.get("/", lineController.listLines);
 
 /**
  * @swagger
- * /lines:
- *   get:
- *     summary: Get list of lines
- *     tags: [Line]
- *     responses:
- *       200:
- *         description: List of lines
- */
- router.get("/search", lineController.searchLines);
-
-/**
- * @swagger
- * /lines/{id}:
+ * /lines/line/{id}:
  *   get:
  *     summary: Get line details by ID
  *     tags: [Line]
@@ -89,5 +77,36 @@ router.get("/line/:id", lineController.getLine);
  *         description: stops list
  */
 router.get("/:id/stops", lineController.getLineStops);
+
+/**
+ * @swagger
+ * /lines/search:
+ *   post:
+ *     summary: Search lines
+ *     tags: [Line]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               lineName:
+ *                 type: string
+ *                 description: The type of the line
+ *               origin:
+ *                 type: string
+ *                 description: The origin of the line
+ *               destination:
+ *                 type: string
+ *                 description: The destination of the line
+ *               type:
+ *                 type: string
+ *                 description: The type of the line
+ *     responses:
+ *       200:
+ *         description: List of searched lines
+ */
+ router.post("/search", lineController.searchLines);
 
 module.exports = router;

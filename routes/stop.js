@@ -6,7 +6,7 @@ const stopController = require('../controllers/stop.js');
  * @swagger
  * tags:
  *   name: Stop
- *   description: Stop API
+ *   description: Operations about stops
  */
 
 /**

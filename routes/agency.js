@@ -6,7 +6,7 @@ const agencyController = require('../controllers/agency.js');
  * @swagger
  * tags:
  *   name: Agency
- *   description: Agency API
+ *   description: Operations about agencies
  */
 
 /**

@@ -11,20 +11,18 @@ exports.listLines = async (req, res, next) => {
 
 exports.searchLines = async (req, res, next) => {
   const query = {};
-  if(req.query.lineName)
-  query.lineName = { $regex: '.*' + req.query.lineName + '.*' } ; 
+  if(req.body.lineName)
+  query.lineName = { $regex: '.*' + req.body.lineName + '.*' } ; 
 
-  if(req.query.origin)
-  query.origin = { $regex: '.*' + req.query.origin + '.*' } ; 
+  if(req.body.origin)
+  query.origin = { $regex: '.*' + req.body.origin + '.*' } ; 
 
-  if(req.query.destination)
-  query.destination = { $regex: '.*' + req.query.destination + '.*' } ; 
+  if(req.body.destination)
+  query.destination = { $regex: '.*' + req.body.destination + '.*' } ; 
 
-  if(req.query.type)
-  query.lineType = req.query.type ; 
+  if(req.body.type)
+  query.lineType = req.body.type ; 
 
-
-  console.log(query);
   try {
     const lines = await Line.find(query , {trips:0 , stops:0}).sort({lineNumber: 'asc'}).populate("agency");
     res.status(200).send(lines);
