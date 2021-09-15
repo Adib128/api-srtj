@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const itinerarySchema = mongoose.Schema(
+const tripSchema = mongoose.Schema(
   {
-    itineraryOrder: Number,
+    tripOrder: Number,
     departureTime: String,
     arrivalTime: String,
     price: Number,
@@ -14,4 +14,4 @@ const itinerarySchema = mongoose.Schema(
   { versionKey: false }
 );
 
-module.exports = mongoose.model("Itinerary", itinerarySchema);
+module.exports = mongoose.model("Trip", tripSchema);
