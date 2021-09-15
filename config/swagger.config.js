@@ -8,7 +8,7 @@ const configs = {
       },
       servers: [
         {
-          url: "https://api-srtj.herokuapp.com/",
+          url: "https://api-srtj.herokuapp.com",
         },
       ],
     },

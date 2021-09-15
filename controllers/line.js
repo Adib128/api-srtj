@@ -50,6 +50,9 @@ exports.searchLines = async (req, res, next) => {
   if(req.body.type)
   query.lineType = req.body.type ; 
 
+  if(req.body.lineNumber)
+  query.lineNumber = req.body.lineNumber ; 
+
   try {
     const lines = await Line.find(query , {trips:0 , stops:0}).sort({lineNumber: 'asc'}).populate("agency");
     res.status(200).send(lines);

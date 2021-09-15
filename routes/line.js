@@ -103,6 +103,9 @@ router.get("/:id/stops", lineController.getLineStops);
  *               type:
  *                 type: string
  *                 description: The type of the line
+ *               lineNumber:
+ *                 type: integer
+ *                 description: The number of the line 
  *     responses:
  *       200:
  *         description: List of searched lines
