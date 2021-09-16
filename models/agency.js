@@ -4,6 +4,8 @@ const agencySchema = mongoose.Schema(
   {
     agencyKey: String,
     agencyName: String,
+    agencyPhone: Number,
+    agencyAddress: String
   },
   { versionKey: false }
 );

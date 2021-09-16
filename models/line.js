@@ -11,6 +11,10 @@ const lineSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Agency",
     },
+    route: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Route",
+    },
     trips: [
       {
         type: mongoose.Schema.Types.ObjectId,
