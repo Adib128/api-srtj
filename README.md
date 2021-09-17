@@ -23,3 +23,13 @@ Now if you go to http://127.0.0.1:3000/lines, you'll get
 ## Documentation
 
 You'll find the documentation here [https://api-srtj.herokuapp.com/api-docs](https://api-srtj.herokuapp.com/api-docs).
+
+## Overview
+
+The API contains a list of endpoints returning all the essential informations about the public transportation service.
+
+### No API Key
+You can just use the API without authentication.
+
+### CORS
+This API has CORS enabled, so you can query it from any webpage.
