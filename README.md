@@ -23,9 +23,16 @@ This API has CORS enabled, so you can query it from any webpage.
 
 You can install the project on your own server.
 ```
+# Get the latest snapshot
 $ git clone https://github.com/Adib128/api-srtj
+
+# Change directory
 $ cd api-srtj
+
+# Install NPM dependencies
 $ npm install
+
+# Then simply start your app
 $ npm start
 ```
 Now if you go to http://127.0.0.1:3000/lines, you'll get
