@@ -32,7 +32,7 @@ $ cd api-srtj
 # Install NPM dependencies
 $ npm install
 
-# Then simply start your app
+# Then simply start the project
 $ npm start
 ```
 Now if you go to http://127.0.0.1:3000/lines, you'll get
