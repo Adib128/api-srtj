@@ -22,7 +22,7 @@ This API has CORS enabled, so you can query it from any webpage.
 ## Installation
 
 You can install the project on your own server.
-```
+```bash
 # Get the latest snapshot
 $ git clone https://github.com/Adib128/api-srtj
 
