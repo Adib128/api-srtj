@@ -24,5 +24,5 @@ app.use("/lines", lineRoute);
 app.use("/stops", stopRoute);
 app.use("/trips", tripRoute);
 
-app.listen(process.env.PORT || 3000, console.log('Server running correctly'));
+app.listen(3000);
 

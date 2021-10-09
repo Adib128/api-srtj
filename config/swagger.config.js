@@ -13,4 +13,4 @@ const configs = {
     },
     apis: ["./routes/*.js"],
   };
-  module.exports = configs ;
+module.exports = configs ;
