@@ -21,6 +21,26 @@ This API has CORS enabled, so you can query it from any webpage.
 
 ## Installation
 
+### Installation with docker
+Install docker on Mac, Windows or Linux [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+
+For Linux you need to install docker compose separately here [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+
+```bash
+# Get the latest snapshot
+$ git clone https://github.com/Adib128/api-srtj
+
+# Change directory
+$ cd api-srtj
+
+# Runing the docker container
+$ docker-compose up
+
+```
+Now if you go to http://127.0.0.1:3000/lines, you'll get
+
+### Installation without docker
+
 You can install the project on your own server.
 ```bash
 # Get the latest snapshot
