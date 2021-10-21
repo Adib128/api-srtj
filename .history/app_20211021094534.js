@@ -25,5 +25,5 @@ app.use("/stops", stopRoute);
 app.use("/trips", tripRoute);
 
 const port = process.env.PORT || 3000;
-app.listen(port);
+app.listen(3000);
 
